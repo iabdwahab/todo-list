@@ -18,8 +18,4 @@ export function updateActiveCompletedArrays() {
 
   activeTasks = active;
   completedTasks = completed;
-
-  console.log(allTasks)
-  console.log(activeTasks)
-  console.log(completedTasks)
 }

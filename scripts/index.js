@@ -53,6 +53,7 @@ addTaskBtn.addEventListener('click', e => {
   (selectedOption === 'all') ? fullUpdate(allTasks)
   : (selectedOption === 'active') ? fullUpdate(activeTasks)
   : fullUpdate(selectedOption);
+  
 });
 
 
