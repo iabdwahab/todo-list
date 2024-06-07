@@ -6,7 +6,10 @@ const tasksViewer = document.querySelector('.tasks-viewer');
 const inputErrorEl = document.querySelector('.input-error');
 const optionsElmenets = document.querySelectorAll('.tasks-options__option-btn');
 
-fullUpdate(allTasks);
+window.addEventListener('load', () => {
+  fullUpdate(allTasks);
+});
+
 
 optionsElmenets.forEach((option) => {
 
@@ -95,4 +98,5 @@ function fullUpdate(updateHTMLOption) {
   updateHTML(updateHTMLOption);
   updateActiveCompletedArrays();
   toggleTaskCompletion();
+  localStorage.setItem('allTasks', JSON.stringify(allTasks));
 }

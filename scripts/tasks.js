@@ -1,4 +1,4 @@
-export const allTasks = [];
+export const allTasks = JSON.parse(localStorage.getItem('allTasks')) || [];
 export let activeTasks = [];
 export let completedTasks = [];
 
