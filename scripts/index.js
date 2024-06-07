@@ -35,7 +35,11 @@ addTaskBtn.addEventListener('click', e => {
 
   if (taskText.length < 3) {
     inputErrorEl.classList.add('input-error--visible');
-  
+    
+    taskInputField.addEventListener('input', () => {
+      inputErrorEl.classList.remove('input-error--visible');
+    })
+
     return false;
   }
 
