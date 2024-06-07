@@ -50,7 +50,9 @@ addTaskBtn.addEventListener('click', e => {
 
   const selectedOption = document.querySelector('.tasks-options__option-btn--selected').dataset.selectedOption;
 
-  fullUpdate(selectedOption);
+  (selectedOption === 'all') ? fullUpdate(allTasks)
+  : (selectedOption === 'active') ? fullUpdate(activeTasks)
+  : fullUpdate(selectedOption);
 });
 
 
