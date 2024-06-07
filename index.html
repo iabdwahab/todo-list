@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Ibrahim AbdElwahab">
+  <title>ToDo List App</title>
+
+  <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+  <main class="page">
+    <div class="page__container">
+
+      <form class="input-container">
+        <input type="text" placeholder="New Task..." class="task-input-field">
+        <button class="task-add-btn">Add Task</button>
+      </form>
+
+      <p class="input-error">At least 3 characters</p>
+
+      <section class="tasks-options">
+        <button class="tasks-options__option-btn tasks-options__option-btn--selected"data-selected-option="all">All</button>
+        <button class="tasks-options__option-btn" data-selected-option="active">Active</button>
+        <button class="tasks-options__option-btn" data-selected-option="completed">Completed</button>
+      </section>
+      
+      <section class="tasks-viewer">
+      </section>
+    </div>
+  </main>
+
+  <script src="scripts/index.js" type="module"></script>
+</body>
+</html>

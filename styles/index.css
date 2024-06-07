@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --main-color: #007bff;
+  --black-color: #333;
+  --grey-color: #d3d3d3;
+  --white-color: white;
+}
+
+.page__container {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 70px;
+}
+
+.input-container {
+  display: grid;
+  grid-template-columns: 1fr 130px;
+  gap: 10px;
+}
+
+.task-input-field {
+  padding: 10px 14px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border: 2px solid var(--grey-color);
+  font-size: 16px;
+}
+
+.task-add-btn {
+  border: 2px solid transparent;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  background-color: var(--main-color);
+  color: var(--white-color);
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+}
+.task-add-btn:hover {
+  opacity: 0.9;
+}
+.task-add-btn:active {
+  opacity: 0.8;
+}
+
+.input-error {
+  margin-top: 6px;
+  margin-bottom: 6px;
+  color: red;
+  visibility: hidden;
+}
+.input-error--visible {
+  visibility: visible;
+}
+
+.tasks-options {
+  /* background-color: var(--black-color); */
+  margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.tasks-options__option-btn {
+  padding: 14px;
+  background-color: transparent;
+  border: none;
+  font-weight: 400;
+  font-size: 16px;
+  cursor: pointer;
+  color: var(--black-color);
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border: 1px solid var(--grey-color);
+}
+.tasks-options__option-btn:hover {
+  background-color: #f7f7f7;
+}
+
+.tasks-options__option-btn--selected {
+  border-bottom: 2px solid var(--main-color);
+  color: var(--main-color);
+  font-weight: 500;
+}
+
+.tasks-viewer {
+  display: grid;
+  gap: 10px;
+  font-size: 20px;
+}
+
+
+.tasks-viewer__task--completed .tasks-viewer__task-text {
+  text-decoration: line-through;
+}
