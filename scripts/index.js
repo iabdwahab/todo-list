@@ -44,7 +44,9 @@ addTaskBtn.addEventListener('click', e => {
     completed: false,
   });
 
-  fullUpdate(allTasks);
+  const selectedOption = document.querySelector('.tasks-options__option-btn--selected').dataset.selectedOption;
+
+  fullUpdate(selectedOption);
 });
 
 
